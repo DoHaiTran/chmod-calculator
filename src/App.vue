@@ -1,21 +1,15 @@
 <template>
   <div id="app">
     <Calculator></Calculator>
-    <!-- <PermissionMonitor></PermissionMonitor> -->
-    <!-- <PermissionItem></PermissionItem> -->
   </div>
 </template>
 
 <script>
- import Calculator from "@/components/Calculator"
-//import PermissionMonitor from './components/PermissionMonitor.vue'
-//import PermissionItem from './components/PermissionItem.vue'
+ import Calculator from "./components/Calculator.vue"
 export default {
   name: 'App',
   components: {
-    Calculator
-    //PermissionItem
-    //PermissionMonitor
+    Calculator 
   }
 }
 </script>

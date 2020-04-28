@@ -9,16 +9,16 @@
             <PermissionItem :data-item="publicData" @changeCheckBox="handleChangeCheckBox"> </PermissionItem>
         </div>
 
-        <PermissionMoniter :data-monitor="dataMonitor"></PermissionMoniter>
+        <PermissionMonitor :data-monitor="dataMonitor"></PermissionMonitor>
     </div>
 </div>
   
 </template>
 
 <script>
-import Header from "@/components/Header";
-import PermissionItem from "@/components/PermissionItem";
-import PermissionMonitor from "@/components/PermissionMonitor";
+import Header from "@/components/Header.vue";
+import PermissionItem from "@/components/PermissionItem.vue";
+import PermissionMonitor from "@/components/PermissionMonitor.vue";
 
 export default {
     name: 'Caculator',
@@ -71,11 +71,11 @@ export default {
     },
     computed:{
         numValue: function () {
-            return bitToNumber(this.ownerData.bit) + bitToNumber(this.groupData.bit) + bitToNumber(this.publicData.bit);
+            return this.bitToNumber(this.ownerData.bit) + this.bitToNumber(this.groupData.bit) + this.bitToNumber(this.publicData.bit);
         },
 
         symValue: function () {
-            return bitToSymbol(this.ownerData.bit) + bitToSymbol(this.groupData.bit) + bitToSymbol(this.publicData.bit);
+            return this.bitToSymbol(this.ownerData.bit) + this.bitToSymbol(this.groupData.bit) + this.bitToSymbol(this.publicData.bit);
         },
         dataMonitor: function(){
             return {
@@ -87,8 +87,8 @@ export default {
     
 
 }
-</script scoped>
+</script>
 
-<style>
+<style scoped>
 
 </style>

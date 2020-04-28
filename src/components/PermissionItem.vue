@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <h2>{{this.dataItem.type}}</h2> -->
+    <h2>{{this.dataItem.type}}</h2>
     <label for="read">Read</label>
     <input type="checkbox" id="read" v-model="readResult" @change="changeCheckBox" :checked="readResult">
     <br>
@@ -21,9 +21,9 @@ export default {
   name: 'PermissionItem',
   data: function () {
     return {
-      readResult: this.dataItem.bit[0] === '0',
-      writeResult: this.dataItem.bit[1] === '0',
-      executeResult: this.dataItem.bit[2] === '0'
+      readResult: this.dataItem.bit[0] === '1',
+      writeResult: this.dataItem.bit[1] === '1',
+      executeResult: this.dataItem.bit[2] === '1'
     }
   },
   props: {
